@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reframe — A structured website preview platform for established businesses." />
+
+  <title>Reframe — Structured Website Preview Platform</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─────────────────────────────────────── NAVIGATION -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">Re<span>frame</span></a>
+    <a href="#overview" class="nav-cta">Request Your Overview</a>
+  </nav>
+
+  <!-- ─────────────────────────────────────── HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-label">Structured Website Preview Platform</div>
+
+      <h1>
+        Your Business Works.<br/>
+        <em>Your Website Should Too.</em>
+      </h1>
+
+      <p class="hero-sub">
+        Reframe prepares structured, launch-ready digital presences for
+        established businesses — before you commit to anything.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#overview" class="btn-primary">Request Your Overview</a>
+
+        <button class="btn-secondary" id="openModal" type="button">
+          <span class="play-icon">
+            <svg width="8" height="10" viewBox="0 0 8 10" fill="none" aria-hidden="true">
+              <path d="M1.5 1.5L6.5 5L1.5 8.5V1.5Z" fill="currentColor"/>
+            </svg>
+          </span>
+          Explore Reframe in 90 Seconds
+        </button>
+      </div>
+
+      <!-- ── Floating UI Windows ── -->
+      <div class="hero-visual" id="heroVisual">
+
+        <!-- Window 1: Desktop site mockup -->
+        <div class="ui-window ui-window-main" aria-hidden="true">
+          <div class="win-chrome">
+            <div class="win-dot dot-red"></div>
+            <div class="win-dot dot-yel"></div>
+            <div class="win-dot dot-grn"></div>
+            <div class="win-url">harborstone.co</div>
+          </div>
+          <div class="mock-desktop">
+            <div class="mock-topbar">
+              <div class="mock-logo-bar"></div>
+              <div class="mock-nav-items">
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item" style="width:30px"></div>
+              </div>
+              <div class="mock-cta-bar"></div>
+            </div>
+            <div class="mock-hero-area">
+              <div class="mock-h1-line"></div>
+              <div class="mock-h1-line-2"></div>
+              <div class="mock-sub-lines">
+                <div class="mock-sub-line"></div>
+                <div class="mock-sub-line"></div>
+                <div class="mock-sub-line"></div>
+              </div>
+              <div class="mock-buttons-row">
+                <div class="mock-btn mock-btn-fill"></div>
+                <div class="mock-btn mock-btn-ghost"></div>
+              </div>
+            </div>
+            <div class="mock-cards">
+              <div class="mock-card">
+                <div class="mock-card-dot"></div>
+                <div class="mock-card-lines">
+                  <div class="mock-card-line"></div>
+                  <div class="mock-card-line"></div>
+                </div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-card-dot mock-card-dot-blue"></div>
+                <div class="mock-card-lines">
+                  <div class="mock-card-line"></div>
+                  <div class="mock-card-line"></div>
+                </div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-card-dot mock-card-dot-mint"></div>
+                <div class="mock-card-lines">
+                  <div class="mock-card-line"></div>
+                  <div class="mock-card-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Window 2: Mobile mockup -->
+        <div class="ui-window ui-window-mobile" aria-hidden="true">
+          <div class="win-chrome win-chrome-sm">
+            <div class="win-dot dot-red win-dot-sm"></div>
+            <div class="win-dot dot-yel win-dot-sm"></div>
+            <div class="win-dot dot-grn win-dot-sm"></div>
+            <div class="win-url" style="font-size:9px">mobile</div>
+          </div>
+          <div class="mock-mobile">
+            <div class="mock-mob-bar"></div>
+            <div class="mock-mob-hero">
+              <div class="mock-mob-line"></div>
+              <div class="mock-mob-line"></div>
+              <div class="mock-mob-line"></div>
+              <div class="mock-mob-btn"></div>
+            </div>
+            <div class="mock-mob-cards">
+              <div class="mock-mob-card"></div>
+              <div class="mock-mob-card"></div>
+              <div class="mock-mob-card"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Window 3: CMS dashboard -->
+        <div class="ui-window ui-window-cms" aria-hidden="true">
+          <div class="win-chrome win-chrome-sm">
+            <div class="win-dot dot-red win-dot-sm"></div>
+            <div class="win-dot dot-yel win-dot-sm"></div>
+            <div class="win-dot dot-grn win-dot-sm"></div>
+            <div class="win-url" style="font-size:9px">cms.reframe</div>
+          </div>
+          <div class="mock-cms">
+            <div class="mock-cms-sidebar">
+              <div class="cms-icon cms-icon-active"></div>
+              <div class="cms-icon"></div>
+              <div class="cms-icon"></div>
+              <div class="cms-icon"></div>
+            </div>
+            <div class="mock-cms-main">
+              <div class="cms-header-row">
+                <div class="cms-title-bar"></div>
+                <div class="cms-add-btn"></div>
+              </div>
+              <div class="cms-row">
+                <div class="cms-row-dot"></div>
+                <div class="cms-row-label"></div>
+                <div class="cms-row-badge"></div>
+              </div>
+              <div class="cms-row">
+                <div class="cms-row-dot cms-row-dot-lav"></div>
+                <div class="cms-row-label cms-row-label-sm"></div>
+                <div class="cms-row-badge cms-row-badge-lav"></div>
+              </div>
+              <div class="cms-row">
+                <div class="cms-row-dot cms-row-dot-dim"></div>
+                <div class="cms-row-label cms-row-label-xs"></div>
+                <div class="cms-row-badge"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.hero-visual -->
+
+    </div><!-- /.hero-inner -->
+  </section>
+
+  <!-- ─────────────────────────────────────── PROBLEM -->
+  <section class="problem-section">
+    <div class="section-inner">
+
+      <p class="section-eyebrow reveal">The Problem</p>
+      <h2 class="section-title reveal reveal-d1">
+        Most Established Businesses<br/>Have Outgrown Their Website
+      </h2>
+
+      <div class="problem-grid">
+
+        <div class="problem-card reveal reveal-d1">
+          <div class="problem-icon">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M14 17.5h7M17.5 14v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Outdated Design</h3>
+          <p>Your business evolved. Your website didn't. What once represented you now works against you.</p>
+        </div>
+
+        <div class="problem-card reveal reveal-d2">
+          <div class="problem-icon problem-icon-blue">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>No Structured Presence</h3>
+          <p>A website exists — but it doesn't communicate authority. Visitors can't tell what you do or why you're the right choice.</p>
+        </div>
+
+        <div class="problem-card reveal reveal-d3">
+          <div class="problem-icon problem-icon-mint">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h16M4 12h10M4 18h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>DIY That Doesn't Scale</h3>
+          <p>Templates are easy to start — difficult to grow with. The friction compounds the longer you wait.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────── PROCESS -->
+  <section class="process-section">
+    <div class="section-inner">
+
+      <p class="section-eyebrow reveal">The Framework</p>
+      <h2 class="section-title reveal reveal-d1">A Structured Process</h2>
+
+      <div class="process-blocks reveal reveal-d2">
+
+        <div class="process-block">
+          <p class="process-step">01 — Analyze</p>
+          <h3>We Analyze</h3>
+          <p>We review your existing website, brand presence, and positioning — with fresh eyes and no assumptions.</p>
+        </div>
+
+        <div class="process-block">
+          <p class="process-step">02 — Prepare</p>
+          <h3>We Prepare</h3>
+          <p>We build a structured, modern preview aligned to your business, your audience, and what you've actually built.</p>
+        </div>
+
+        <div class="process-block">
+          <p class="process-step">03 — Launch</p>
+          <h3>You Review &amp; Launch</h3>
+          <p>If approved, we handle deployment, hosting, and technical setup — from start to production.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────── NOT SECTION -->
+  <section class="notlist-section">
+    <div class="section-inner">
+      <div class="notlist-wrapper">
+
+        <div class="notlist-left reveal">
+          <h2>Reframe Is Not</h2>
+          <ul class="notlist">
+            <li>
+              <div class="notlist-x" aria-hidden="true">✕</div>
+              Not DIY — there's no template you configure yourself
+            </li>
+            <li>
+              <div class="notlist-x" aria-hidden="true">✕</div>
+              Not a template marketplace — nothing is generic
+            </li>
+            <li>
+              <div class="notlist-x" aria-hidden="true">✕</div>
+              Not freelance chaos — no back-and-forth, no guesswork
+            </li>
+            <li>
+              <div class="notlist-x" aria-hidden="true">✕</div>
+              Not experimental — every element is intentional
+            </li>
+          </ul>
+          <p class="notlist-tagline">
+            Reframe is a structured digital rebuild —<br/>prepared before you commit.
+          </p>
+        </div>
+
+        <div class="notlist-right reveal reveal-d2">
+          <div class="notlist-card-row">
+            <div class="notlist-card-icon icon-lav">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 12l2 2 4-4M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="notlist-card-text">
+              <h4>Structured from day one</h4>
+              <p>Every Reframe preview is built with intention — architecture, copy, and hierarchy considered before a single pixel is placed.</p>
+            </div>
+          </div>
+          <div class="notlist-divider"></div>
+          <div class="notlist-card-row">
+            <div class="notlist-card-icon icon-blue">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="notlist-card-text">
+              <h4>Review before you invest</h4>
+              <p>You see the full structured preview — designed, built, and ready — before you make a commitment.</p>
+            </div>
+          </div>
+          <div class="notlist-divider"></div>
+          <div class="notlist-card-row">
+            <div class="notlist-card-icon icon-mint">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="notlist-card-text">
+              <h4>From preview to production</h4>
+              <p>We handle deployment, hosting, and technical setup — no hand-off, no coordination overhead.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────── CTA / FORM -->
+  <section class="cta-section" id="overview">
+    <div class="section-inner">
+      <div class="cta-inner">
+
+        <p class="section-eyebrow reveal">Get Started</p>
+        <h2 class="reveal reveal-d1">Request Your Overview</h2>
+        <p class="cta-sub reveal reveal-d2">
+          We'll send you a detailed explanation of the Reframe framework,
+          process, and next steps — no commitment required.
+        </p>
+
+        <div class="reveal reveal-d2">
+          <!--
+            FORMSPREE SETUP:
+            1. Go to https://formspree.io and create a free account
+            2. Create a new form
+            3. Replace "YOUR_FORM_ID" in the action URL below with your actual Formspree form ID
+            Example: action="https://formspree.io/f/xpwzqdkv"
+          -->
+          <form
+            class="cta-form"
+            id="overviewForm"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+          >
+            <div class="form-field">
+              <label class="form-label" for="name">Your Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jane Smith"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="email">Email Address</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@company.com"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="business">Business Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="business"
+                name="business"
+                placeholder="Harborstone Consulting"
+                required
+                autocomplete="organization"
+              />
+            </div>
+
+            <button type="submit" class="btn-primary form-submit">
+              Send Overview
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+            Overview sent. Check your inbox.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────── FOOTER -->
+  <footer>
+    <div class="footer-logo">Re<span>frame</span></div>
+    <p class="footer-copy">© 2025 Reframe. Structured digital infrastructure.</p>
+  </footer>
+
+  <!-- ─────────────────────────────────────── VIDEO MODAL -->
+  <div
+    class="modal-overlay"
+    id="videoModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+    <div class="modal-box">
+      <div class="modal-header">
+        <span class="modal-title" id="modalTitle">Explore Reframe in 90 Seconds</span>
+        <button class="modal-close" id="closeModal" type="button" aria-label="Close video">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-video-area">
+        <!--
+          VIDEO INTEGRATION:
+          Replace the placeholder below with your actual video embed.
+
+          Option A — YouTube embed (no autoplay):
+          <iframe
+            width="100%" height="100%"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+          Option B — Self-hosted video:
+          <video controls preload="metadata" style="width:100%;height:100%">
+            <source src="assets/reframe-overview.mp4" type="video/mp4">
+          </video>
+
+          Option C — Vimeo embed:
+          <iframe
+            src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
+            width="100%" height="100%"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        -->
+        <div class="modal-placeholder">
+          <button class="modal-play-btn" type="button" aria-label="Play overview video">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 4l14 8-14 8V4z" fill="currentColor"/>
+            </svg>
+          </button>
+          <p>Your 90-second overview video</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+</body>
+</html>
