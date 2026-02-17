@@ -933,6 +933,14 @@
     .form-submit {
       width: 100%;
       margin-top: 8px;
+      justify-content: center;
+      text-align: center;
+    }
+    .form-textarea {
+      resize: vertical;
+      min-height: 110px;
+      line-height: 1.6;
+      font-family: inherit;
     }
 
     .form-success {
@@ -1163,7 +1171,7 @@
             <div class="win-dot dot-red"></div>
             <div class="win-dot dot-yel"></div>
             <div class="win-dot dot-grn"></div>
-            <div class="win-url">harborstone.co</div>
+            <div class="win-url">YourBusinessDomain.co.za</div>
           </div>
           <div class="win-body">
             <div class="mock-desktop">
@@ -1427,18 +1435,35 @@
           action="https://formspree.io/f/yourformid"
           method="POST"
         >
+          <!-- Hidden field so Formspree forwards to your Gmail -->
+          <input type="hidden" name="_replyto" value="reframepreviewlab@gmail.com" />
+          <input type="hidden" name="_to"      value="reframepreviewlab@gmail.com" />
+
           <div class="form-field">
             <label class="form-label" for="name">Your Name</label>
             <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required />
           </div>
+
           <div class="form-field">
             <label class="form-label" for="email">Email Address</label>
             <input class="form-input" type="email" id="email" name="email" placeholder="jane@company.com" required />
           </div>
+
+          <div class="form-field">
+            <label class="form-label" for="phone">Contact Number</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+1 555 000 0000" />
+          </div>
+
           <div class="form-field">
             <label class="form-label" for="business">Business Name</label>
-            <input class="form-input" type="text" id="business" name="business" placeholder="Harborstone Consulting" required />
+            <input class="form-input" type="text" id="business" name="business" placeholder="Enter Business Name Here" required />
           </div>
+
+          <div class="form-field">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-input form-textarea" id="message" name="message" placeholder="Tell us a little about your business and what you're looking to achieve…" rows="4"></textarea>
+          </div>
+
           <button type="submit" class="btn-primary form-submit">
             Send Overview
           </button>
