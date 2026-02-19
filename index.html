@@ -310,256 +310,19 @@
     }
     .play-icon svg { margin-left: 2px; }
 
-    /* ─── HERO VISUAL (UI Windows) ─────────────────────*/
-    .hero-visual {
-      position: relative;
-      margin-top: 80px;
-      width: 100%;
-      max-width: 1000px;
-      height: 480px;
-      perspective: 1400px;
-    }
-
-    .hero-visual::before {
-      content: '';
-      position: absolute;
-      bottom: -40px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 70%;
-      height: 100px;
-      background: radial-gradient(ellipse, rgba(184,168,255,0.08) 0%, transparent 70%);
-      filter: blur(20px);
-      pointer-events: none;
-    }
-
-    .ui-window {
-      position: absolute;
-      border-radius: 14px;
-      background: #16161C;
-      border: 1px solid rgba(255,255,255,0.07);
-      box-shadow: 0 24px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04);
-      overflow: hidden;
-      will-change: transform;
-    }
-
-    .ui-window-main {
-      width: 560px;
-      height: 380px;
-      top: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 3;
-      animation: win-float-main 6s ease-in-out infinite;
-    }
-
-    .ui-window-mobile {
-      width: 180px;
-      height: 320px;
-      top: 60px;
-      right: 2%;
-      z-index: 2;
-      animation: win-float-mobile 6s ease-in-out infinite;
-      animation-delay: -2s;
-    }
-
-    .ui-window-cms {
-      width: 260px;
-      height: 220px;
-      top: 80px;
-      left: 3%;
-      z-index: 2;
-      animation: win-float-cms 6s ease-in-out infinite;
-      animation-delay: -4s;
-    }
-
-    @keyframes win-float-main {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50%       { transform: translateX(-50%) translateY(-10px); }
-    }
-    @keyframes win-float-mobile {
-      0%, 100% { transform: rotate(3deg) translateY(0); }
-      50%       { transform: rotate(3deg) translateY(-10px); }
-    }
-    @keyframes win-float-cms {
-      0%, 100% { transform: rotate(-2.5deg) translateY(0); }
-      50%       { transform: rotate(-2.5deg) translateY(-8px); }
-    }
-
-    .win-chrome {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 10px 14px;
-      background: rgba(255,255,255,0.04);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      backdrop-filter: blur(8px);
-    }
-
-    .win-chrome-sm {
-      padding: 7px 10px;
-    }
-
-    .win-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-    .win-dot-sm { width: 7px; height: 7px; }
-    .dot-red { background: #FF5F57; }
-    .dot-yel { background: #FFBD2E; }
-    .dot-grn { background: #28C840; }
-
-    .win-url {
-      flex: 1;
-      text-align: center;
-      font-size: 11px;
-      font-family: 'DM Mono', monospace;
-      color: var(--text-muted);
-      background: rgba(0,0,0,0.2);
-      border-radius: 4px;
-      padding: 3px 8px;
-      margin: 0 8px;
-    }
-
-    /* Mock desktop UI */
-    .mock-desktop {
-      height: calc(380px - 34px);
-      background: #0F0F14;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .mock-topbar {
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .mock-logo-bar   { width: 70px; height: 8px; background: rgba(184,168,255,0.4); border-radius: 4px; }
-    .mock-nav-items  { display: flex; gap: 16px; }
-    .mock-nav-item   { width: 40px; height: 6px; background: rgba(255,255,255,0.12); border-radius: 3px; }
-    .mock-cta-bar    { width: 70px; height: 24px; background: rgba(184,168,255,0.25); border-radius: 6px; }
-
-    .mock-hero-area  { padding: 28px 20px 20px; flex: 1; }
-
-    .mock-h1-line    { height: 18px; width: 75%; background: rgba(255,255,255,0.55); border-radius: 4px; margin-bottom: 10px; }
-    .mock-h1-line-2  { height: 18px; width: 55%; background: rgba(255,255,255,0.35); border-radius: 4px; margin-bottom: 18px; }
-
-    .mock-sub-lines  { margin-bottom: 22px; }
-    .mock-sub-line   { height: 8px; background: rgba(255,255,255,0.13); border-radius: 3px; margin-bottom: 7px; }
-    .mock-sub-line:last-child { width: 65%; }
-
-    .mock-buttons-row { display: flex; gap: 10px; }
-    .mock-btn        { height: 28px; width: 100px; border-radius: 6px; }
-    .mock-btn-fill   { background: rgba(184,168,255,0.4); }
-    .mock-btn-ghost  { background: transparent; border: 1px solid rgba(184,168,255,0.25); }
-
-    .mock-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-      padding: 0 20px 20px;
-    }
-
-    .mock-card {
-      height: 60px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 8px;
-      padding: 10px 12px;
-    }
-
-    .mock-card-dot   { width: 20px; height: 6px; background: rgba(184,168,255,0.3); border-radius: 3px; margin-bottom: 6px; }
-    .mock-card-dot-blue { background: rgba(155,184,255,0.3); }
-    .mock-card-dot-mint { background: rgba(159,230,195,0.3); }
-    .mock-card-lines { display: flex; flex-direction: column; gap: 5px; }
-    .mock-card-line  { height: 5px; background: rgba(255,255,255,0.1); border-radius: 2px; }
-    .mock-card-line:last-child { width: 70%; }
-
-    /* Mock mobile */
-    .mock-mobile {
-      height: calc(320px - 34px);
-      background: #0F0F14;
-      display: flex;
-      flex-direction: column;
-      padding: 12px 10px;
-      gap: 10px;
-    }
-
-    .mock-mob-bar    { height: 8px; width: 50%; background: rgba(184,168,255,0.3); border-radius: 4px; }
-    .mock-mob-hero   { background: rgba(255,255,255,0.04); border-radius: 8px; padding: 12px; flex: 1; }
-    .mock-mob-line   { height: 7px; background: rgba(255,255,255,0.3); border-radius: 3px; margin-bottom: 6px; }
-    .mock-mob-line:nth-child(2) { width: 80%; background: rgba(255,255,255,0.18); }
-    .mock-mob-line:nth-child(3) { width: 60%; background: rgba(255,255,255,0.12); }
-    .mock-mob-btn   { margin-top: 14px; height: 24px; width: 80%; background: rgba(184,168,255,0.35); border-radius: 5px; }
-    .mock-mob-cards { display: flex; flex-direction: column; gap: 6px; }
-    .mock-mob-card  { height: 36px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; }
-
-    /* Mock CMS */
-    .mock-cms {
-      height: calc(220px - 34px);
-      background: #0C0C10;
-      display: flex;
-    }
-
-    .mock-cms-sidebar {
-      width: 44px;
-      background: rgba(255,255,255,0.03);
-      border-right: 1px solid rgba(255,255,255,0.06);
-      padding: 10px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .cms-icon        { width: 20px; height: 20px; background: rgba(255,255,255,0.07); border-radius: 5px; }
-    .cms-icon-active { background: rgba(184,168,255,0.3); }
-
-    .mock-cms-main {
-      flex: 1;
-      padding: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .cms-header-row   { display: flex; align-items: center; justify-content: space-between; }
-    .cms-title-bar    { width: 80px; height: 8px; background: rgba(255,255,255,0.35); border-radius: 3px; }
-    .cms-add-btn      { width: 50px; height: 18px; background: rgba(184,168,255,0.25); border-radius: 4px; }
-
-    .cms-row {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 8px;
-      background: rgba(255,255,255,0.03);
-      border-radius: 5px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .cms-row-dot     { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-mint); flex-shrink: 0; }
-    .cms-row-dot-lav { background: var(--accent-lav); }
-    .cms-row-dot-dim { background: rgba(255,255,255,0.15); }
-    .cms-row-label   { flex: 1; height: 6px; background: rgba(255,255,255,0.15); border-radius: 3px; }
-    .cms-row-label-sm { width: 50%; flex: none; }
-    .cms-row-label-xs { width: 60%; flex: none; }
-    .cms-row-badge   { width: 30px; height: 12px; background: rgba(155,184,255,0.2); border-radius: 3px; flex-shrink: 0; }
-    .cms-row-badge-lav { background: rgba(184,168,255,0.2); }
-
     /* ─── DEMO BANNER (replaces video preview) ─────────*/
     .demo-banner {
       position: relative;
       width: 100%;
-      height: 520px;
-      background: linear-gradient(180deg, rgba(11,12,16,0.6) 0%, rgba(11,12,16,0.4) 100%),
-                  url('assets/demo-stack.png') center center / cover no-repeat;
+      height: min(70vh, 620px);
+      background:
+        linear-gradient(180deg, rgba(11,12,16,0.65) 0%, rgba(11,12,16,0.45) 100%),
+        url('assets/demo-stack.png') center center / contain no-repeat;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 14px;
       cursor: pointer;
       transition: transform 0.3s ease;
     }
@@ -590,6 +353,14 @@
 
     .demo-play-btn svg {
       margin-left: 4px;
+    }
+
+    .demo-caption {
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      color: rgba(255,255,255,0.78);
+      text-align: center;
+      text-shadow: 0 6px 22px rgba(0,0,0,0.55);
     }
 
     /* ─── SECTION BASE ──────────────────────────────────*/
@@ -1057,38 +828,17 @@
 
     /* ─── RESPONSIVE ────────────────────────────────────*/
     @media (max-width: 1024px) {
-      .process-blocks {
-        grid-template-columns: 1fr;
-      }
-
-      .process-block {
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.07);
-      }
-
-      .process-block:last-child {
-        border-bottom: none;
-      }
+      .process-blocks { grid-template-columns: 1fr; }
+      .process-block { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .process-block:last-child { border-bottom: none; }
     }
 
     @media (max-width: 900px) {
       nav { padding: 18px 24px; }
       section { padding: 72px 24px; }
-
-      .hero-visual { height: 320px; }
-
-      .ui-window-main   { width: 380px; height: 260px; }
-      .ui-window-mobile { display: none; }
-      .ui-window-cms    { display: none; }
-
-      .mock-desktop { height: calc(260px - 34px); }
-      .mock-cards   { display: none; }
-
-      .notlist-wrapper  { grid-template-columns: 1fr; gap: 48px; }
-      .notlist-right    { display: none; }
-
+      .notlist-wrapper { grid-template-columns: 1fr; gap: 48px; }
+      .notlist-right { display: none; }
       footer { flex-direction: column; gap: 12px; text-align: center; }
-
       .demo-banner { height: 420px; }
       .demo-play-btn { width: 78px; height: 78px; }
     }
@@ -1096,16 +846,13 @@
     @media (max-width: 600px) {
       .hero-buttons { flex-direction: column; width: 100%; }
       .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
-
-      .hero-visual { display: none; }
-
       footer { padding: 28px 24px; }
-
       .demo-banner { height: 320px; }
       .demo-play-btn { width: 68px; height: 68px; }
     }
   </style>
 </head>
+
 <body>
 
   <!-- ─────────────────────────────────────── NAVIGATION -->
@@ -1145,141 +892,17 @@
         </button>
       </div>
 
-      <!-- ── Floating UI Windows ── -->
-      <div class="hero-visual" id="heroVisual">
-
-        <!-- Window 1: Desktop site mockup -->
-        <div class="ui-window ui-window-main" aria-hidden="true">
-          <div class="win-chrome">
-            <div class="win-dot dot-red"></div>
-            <div class="win-dot dot-yel"></div>
-            <div class="win-dot dot-grn"></div>
-            <div class="win-url">YourBusinessDomain.co.za</div>
-          </div>
-          <div class="mock-desktop">
-            <div class="mock-topbar">
-              <div class="mock-logo-bar"></div>
-              <div class="mock-nav-items">
-                <div class="mock-nav-item"></div>
-                <div class="mock-nav-item"></div>
-                <div class="mock-nav-item" style="width:30px"></div>
-              </div>
-              <div class="mock-cta-bar"></div>
-            </div>
-            <div class="mock-hero-area">
-              <div class="mock-h1-line"></div>
-              <div class="mock-h1-line-2"></div>
-              <div class="mock-sub-lines">
-                <div class="mock-sub-line"></div>
-                <div class="mock-sub-line"></div>
-                <div class="mock-sub-line"></div>
-              </div>
-              <div class="mock-buttons-row">
-                <div class="mock-btn mock-btn-fill"></div>
-                <div class="mock-btn mock-btn-ghost"></div>
-              </div>
-            </div>
-            <div class="mock-cards">
-              <div class="mock-card">
-                <div class="mock-card-dot"></div>
-                <div class="mock-card-lines">
-                  <div class="mock-card-line"></div>
-                  <div class="mock-card-line"></div>
-                </div>
-              </div>
-              <div class="mock-card">
-                <div class="mock-card-dot mock-card-dot-blue"></div>
-                <div class="mock-card-lines">
-                  <div class="mock-card-line"></div>
-                  <div class="mock-card-line"></div>
-                </div>
-              </div>
-              <div class="mock-card">
-                <div class="mock-card-dot mock-card-dot-mint"></div>
-                <div class="mock-card-lines">
-                  <div class="mock-card-line"></div>
-                  <div class="mock-card-line"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Window 2: Mobile mockup -->
-        <div class="ui-window ui-window-mobile" aria-hidden="true">
-          <div class="win-chrome win-chrome-sm">
-            <div class="win-dot dot-red win-dot-sm"></div>
-            <div class="win-dot dot-yel win-dot-sm"></div>
-            <div class="win-dot dot-grn win-dot-sm"></div>
-            <div class="win-url" style="font-size:9px">mobile</div>
-          </div>
-          <div class="mock-mobile">
-            <div class="mock-mob-bar"></div>
-            <div class="mock-mob-hero">
-              <div class="mock-mob-line"></div>
-              <div class="mock-mob-line"></div>
-              <div class="mock-mob-line"></div>
-              <div class="mock-mob-btn"></div>
-            </div>
-            <div class="mock-mob-cards">
-              <div class="mock-mob-card"></div>
-              <div class="mock-mob-card"></div>
-              <div class="mock-mob-card"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Window 3: CMS dashboard -->
-        <div class="ui-window ui-window-cms" aria-hidden="true">
-          <div class="win-chrome win-chrome-sm">
-            <div class="win-dot dot-red win-dot-sm"></div>
-            <div class="win-dot dot-yel win-dot-sm"></div>
-            <div class="win-dot dot-grn win-dot-sm"></div>
-            <div class="win-url" style="font-size:9px">cms.reframe</div>
-          </div>
-          <div class="mock-cms">
-            <div class="mock-cms-sidebar">
-              <div class="cms-icon cms-icon-active"></div>
-              <div class="cms-icon"></div>
-              <div class="cms-icon"></div>
-              <div class="cms-icon"></div>
-            </div>
-            <div class="mock-cms-main">
-              <div class="cms-header-row">
-                <div class="cms-title-bar"></div>
-                <div class="cms-add-btn"></div>
-              </div>
-              <div class="cms-row">
-                <div class="cms-row-dot"></div>
-                <div class="cms-row-label"></div>
-                <div class="cms-row-badge"></div>
-              </div>
-              <div class="cms-row">
-                <div class="cms-row-dot cms-row-dot-lav"></div>
-                <div class="cms-row-label cms-row-label-sm"></div>
-                <div class="cms-row-badge cms-row-badge-lav"></div>
-              </div>
-              <div class="cms-row">
-                <div class="cms-row-dot cms-row-dot-dim"></div>
-                <div class="cms-row-label cms-row-label-xs"></div>
-                <div class="cms-row-badge"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /.hero-visual -->
-
     </div><!-- /.hero-inner -->
   </section>
 
   <!-- ─────────────────────────────────────── DEMO BANNER -->
   <section class="demo-banner" id="demoBanner" aria-label="Video preview">
-    <button class="demo-play-btn" id="demoPlayBtn" aria-label="Play demo video">
+    <button class="demo-play-btn" id="demoPlayBtn" aria-label="Play demo video" type="button">
       <svg width="32" height="36" viewBox="0 0 32 36" fill="none" aria-hidden="true">
         <path d="M2 2L30 18L2 34V2Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
       </svg>
     </button>
+    <div class="demo-caption">Explore Reframe in 90 Seconds</div>
   </section>
 
   <!-- ─────────────────────────────────────── PROBLEM -->
@@ -1370,22 +993,10 @@
         <div class="notlist-left reveal">
           <h2>Reframe Is Not</h2>
           <ul class="notlist">
-            <li>
-              <div class="notlist-x" aria-hidden="true">✕</div>
-              Not DIY — there's no template you configure yourself
-            </li>
-            <li>
-              <div class="notlist-x" aria-hidden="true">✕</div>
-              Not a template marketplace — nothing is generic
-            </li>
-            <li>
-              <div class="notlist-x" aria-hidden="true">✕</div>
-              Not freelance chaos — no back-and-forth, no guesswork
-            </li>
-            <li>
-              <div class="notlist-x" aria-hidden="true">✕</div>
-              Not experimental — every element is intentional
-            </li>
+            <li><div class="notlist-x" aria-hidden="true">✕</div>Not DIY — there's no template you configure yourself</li>
+            <li><div class="notlist-x" aria-hidden="true">✕</div>Not a template marketplace — nothing is generic</li>
+            <li><div class="notlist-x" aria-hidden="true">✕</div>Not freelance chaos — no back-and-forth, no guesswork</li>
+            <li><div class="notlist-x" aria-hidden="true">✕</div>Not experimental — every element is intentional</li>
           </ul>
           <p class="notlist-tagline">
             Reframe is a structured digital rebuild —<br/>prepared before you commit.
@@ -1458,69 +1069,30 @@
 
             <div class="form-field">
               <label class="form-label" for="name">Your Name</label>
-              <input
-                class="form-input"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Jane Smith"
-                required
-                autocomplete="name"
-              />
+              <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
             </div>
 
             <div class="form-field">
               <label class="form-label" for="email">Email Address</label>
-              <input
-                class="form-input"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="jane@company.com"
-                required
-                autocomplete="email"
-              />
+              <input class="form-input" type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
             </div>
 
             <div class="form-field">
               <label class="form-label" for="phone">Contact Number</label>
-              <input
-                class="form-input"
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="+1 555 000 0000"
-                autocomplete="tel"
-              />
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+1 555 000 0000" autocomplete="tel" />
             </div>
 
             <div class="form-field">
               <label class="form-label" for="business">Business Name</label>
-              <input
-                class="form-input"
-                type="text"
-                id="business"
-                name="business"
-                placeholder="Enter Business Name Here"
-                required
-                autocomplete="organization"
-              />
+              <input class="form-input" type="text" id="business" name="business" placeholder="Enter Business Name Here" required autocomplete="organization" />
             </div>
 
             <div class="form-field">
               <label class="form-label" for="message">Message</label>
-              <textarea
-                class="form-input form-textarea"
-                id="message"
-                name="message"
-                placeholder="Tell us a little about your business and what you're looking to achieve…"
-                rows="4"
-              ></textarea>
+              <textarea class="form-input form-textarea" id="message" name="message" placeholder="Tell us a little about your business and what you're looking to achieve…" rows="4"></textarea>
             </div>
 
-            <button type="submit" class="btn-primary form-submit">
-              Send Overview
-            </button>
+            <button type="submit" class="btn-primary form-submit">Send Overview</button>
           </form>
 
           <div class="form-success" id="formSuccess" role="status" aria-live="polite">
@@ -1541,13 +1113,7 @@
   </footer>
 
   <!-- ─────────────────────────────────────── VIDEO MODAL -->
-  <div
-    class="modal-overlay"
-    id="videoModal"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modalTitle"
-  >
+  <div class="modal-overlay" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-box">
       <div class="modal-header">
         <span class="modal-title" id="modalTitle">Explore Reframe in 90 Seconds</span>
@@ -1558,12 +1124,7 @@
         </button>
       </div>
       <div class="modal-video-area">
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          id="modalVideo"
-        >
+        <video controls preload="metadata" playsinline id="modalVideo">
           <source src="assets/reframe-overview.mp4" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
@@ -1577,21 +1138,25 @@
       'use strict';
 
       // ── MODAL CONTROLLER ────────────────────────────────
-
-      const openBtn       = document.getElementById('openModal');
-      const demoPlayBtn   = document.getElementById('demoPlayBtn');
-      const closeBtn      = document.getElementById('closeModal');
-      const modal         = document.getElementById('videoModal');
-      const modalVideo    = document.getElementById('modalVideo');
+      const openBtn     = document.getElementById('openModal');
+      const demoPlayBtn = document.getElementById('demoPlayBtn');
+      const demoBanner  = document.getElementById('demoBanner');
+      const closeBtn    = document.getElementById('closeModal');
+      const modal       = document.getElementById('videoModal');
+      const modalVideo  = document.getElementById('modalVideo');
 
       function openVideoModal() {
+        if (!modal || !modalVideo) return;
         modal.classList.add('open');
         document.body.style.overflow = 'hidden';
         modalVideo.currentTime = 0;
-        modalVideo.play().catch(err => console.warn('Video autoplay blocked:', err));
+        modalVideo.play().catch(function(err) {
+          console.warn('Video autoplay blocked:', err);
+        });
       }
 
       function closeVideoModal() {
+        if (!modal || !modalVideo) return;
         modal.classList.remove('open');
         document.body.style.overflow = '';
         modalVideo.pause();
@@ -1600,6 +1165,15 @@
 
       if (openBtn) openBtn.addEventListener('click', openVideoModal);
       if (demoPlayBtn) demoPlayBtn.addEventListener('click', openVideoModal);
+
+      // Make entire demo banner clickable (but avoid double-trigger when button is clicked)
+      if (demoBanner) {
+        demoBanner.addEventListener('click', function(e) {
+          if (e.target && e.target.closest && e.target.closest('#demoPlayBtn')) return;
+          openVideoModal();
+        });
+      }
+
       if (closeBtn) closeBtn.addEventListener('click', closeVideoModal);
 
       if (modal) {
@@ -1615,7 +1189,6 @@
       });
 
       // ── SCROLL REVEAL ───────────────────────────────────
-
       const reveals = document.querySelectorAll('.reveal');
       const observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
@@ -1626,33 +1199,9 @@
         });
       }, { threshold: 0.12 });
 
-      reveals.forEach(function(el) {
-        observer.observe(el);
-      });
-
-      document.querySelectorAll('.hero .reveal').forEach(function(el) {
-        el.classList.add('visible');
-      });
-
-      // ── HERO PARALLAX ───────────────────────────────────
-
-      const heroVisual = document.getElementById('heroVisual');
-      if (heroVisual) {
-        document.addEventListener('mousemove', function(e) {
-          const cx = window.innerWidth / 2;
-          const cy = window.innerHeight / 2;
-          const dx = (e.clientX - cx) / cx;
-          const dy = (e.clientY - cy) / cy;
-          heroVisual.style.transform = 'translate(' + (dx * -6) + 'px, ' + (dy * -4) + 'px)';
-        });
-
-        document.addEventListener('mouseleave', function() {
-          heroVisual.style.transform = 'translate(0, 0)';
-        });
-      }
+      reveals.forEach(function(el) { observer.observe(el); });
 
       // ── FORM SUBMISSION ─────────────────────────────────
-
       const form    = document.getElementById('overviewForm');
       const success = document.getElementById('formSuccess');
 
@@ -1680,7 +1229,7 @@
             } else {
               const json = await response.json();
               if (json.errors) {
-                alert('There was a problem: ' + json.errors.map(function(e){ return e.message; }).join(', '));
+                alert('There was a problem: ' + json.errors.map(function(er){ return er.message; }).join(', '));
                 if (submitBtn) {
                   submitBtn.textContent = 'Send Overview';
                   submitBtn.disabled = false;
@@ -1701,7 +1250,6 @@
       }
 
       // ── SMOOTH SCROLL ───────────────────────────────────
-
       document.querySelectorAll('a[href^="#"]').forEach(function(link) {
         link.addEventListener('click', function(e) {
           const target = document.querySelector(link.getAttribute('href'));
