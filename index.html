@@ -843,13 +843,44 @@
       .demo-play-btn { width: 78px; height: 78px; }
     }
 
-    @media (max-width: 600px) {
-      .hero-buttons { flex-direction: column; width: 100%; }
-      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
-      footer { padding: 28px 24px; }
-      .demo-banner { height: 320px; }
-      .demo-play-btn { width: 68px; height: 68px; }
-    }
+@media (max-width: 600px) {
+  /* NAV: tighten spacing */
+  nav {
+    padding: 14px 16px;            /* was 18/24 */
+    gap: 12px;
+  }
+
+  /* LOGO: smaller on mobile */
+  .nav-logo img {
+    height: 22px;                  /* was 32px */
+    max-width: 150px;              /* prevents it from dominating */
+  }
+
+  /* CTA: prevent wrapping + reduce size */
+  .nav-cta {
+    white-space: nowrap;           /* stops “Request / Your / Overview” stacking */
+    padding: 8px 12px;             /* smaller */
+    font-size: 13px;               /* smaller */
+    border-radius: 10px;
+    line-height: 1;
+  }
+
+  /* Optional: if you want it even smaller on very narrow screens */
+  @media (max-width: 380px) {
+    .nav-logo img { height: 20px; max-width: 130px; }
+    .nav-cta { padding: 7px 10px; font-size: 12px; }
+  }
+
+  /* Your existing mobile hero button stacking is fine */
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+
+  footer { padding: 28px 24px; }
+
+  .demo-banner { height: 320px; }
+  .demo-play-btn { width: 68px; height: 68px; }
+}
+
   </style>
 </head>
 
